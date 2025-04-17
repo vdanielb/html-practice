@@ -4,6 +4,7 @@ function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
+// NAV BAR
 let pages = [
   { url: '', title: 'Home' },
   { url: 'contact/', title: 'Contact' },
@@ -25,19 +26,53 @@ for (let p of pages) {
   if (!url.startsWith('http')) {
     url = BASE_PATH + url;
   }
-  nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
+  let a = document.createElement('a');
+  a.href = url;
+  a.textContent = title;
+  nav.append(a);
+  
+  // detect current page
+  if (a.host === location.host && a.pathname === location.pathname) {
+    a.classList.add('current');
+  }
+
+  // all external links go to new tab
+  if (a.host !== location.host) { 
+    a.target = '_blank';
+  } 
 }
 
 
 
-// let navLinks = $$("nav a");
+// LIGHT DARK MODE
+document.body.insertAdjacentHTML(
+  'afterbegin',
+  `
+	<label class="color-scheme">
+		Theme:
+		<select>
+      <option value="light dark">Auto</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+		</select>
+	</label>`,
+);
 
-// let currentLink = navLinks.find(
-//   (a) => a.host === location.host && a.pathname === location.pathname,
-// );
+function setColorScheme(scheme) {
+  document.documentElement.style.setProperty('color-scheme', scheme);
+  localStorage.colorScheme = scheme;
+  select.value = localStorage.colorScheme;
+}
 
-// if (currentLink) {
-//   currentLink.classList.add('current');
-// } else {
-//   console.log("No current link found.");
-// }
+let select = document.querySelector('.color-scheme select');
+
+if ("colorScheme" in localStorage) {
+  setColorScheme(localStorage.colorScheme);
+} else {
+  setColorScheme('light');
+}
+
+select.addEventListener('input', function (event) {
+  console.log('color scheme changed to', event.target.value);
+  setColorScheme(event.target.value)
+});

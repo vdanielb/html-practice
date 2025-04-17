@@ -3,6 +3,12 @@
   --nav-color: #ed713a;
 }
 
+label.color-scheme {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
 body {
     /* Set line height to 1.5 times the font size
          and use the OS’s UI font as the website font
