@@ -30,6 +30,7 @@ h1, h2, h3, h4, h5, h6{
   text-wrap: balance;
 }
 
+/* NAV BAR  */
 nav {
     display: flex;
     margin-bottom: 1em;
@@ -58,6 +59,27 @@ nav {
       border-bottom-style: solid;
       font-weight: bold;
     }
+}
+
+/* Home page */ 
+.bio-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap; /* ensures it stacks on smaller screens */
+}
+
+.bio-container p {
+  flex: 1;
+  max-width: 600px;
+  font-size: 16px;
+}
+
+#profile-pic {
+  width: 180px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
 form {
@@ -112,4 +134,94 @@ form {
   hr {
     border-top: 1px solid var(--nav-color);
   }
+}
+
+/* GitHub Card Styles */
+.github-card.refined-layout {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  padding: 2rem;
+  color: #c9d1d9;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  max-width: 900px;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card-header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 0.5rem;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 150px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #30363d;
+}
+
+.username {
+  font-size: 1.2rem;
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.gh-link img {
+  width: 24px;
+  height: 24px;
+  margin-top: 4px;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.stat-block {
+  flex: 1 1 100px;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #8b949e;
+  text-transform: uppercase;
+  margin-top: 0.25rem;
 }
