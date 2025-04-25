@@ -12,10 +12,10 @@
         "description": "An investigation on American recipes on food.com, as well as a Random Forest Regression model that can calculate how long it takes to cook your recipe!"
     },
     {
-        "title": "Facilis saepe commodi doloribus?",
+        "title": "Foodbook",
         "year": "2024",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Vel distinctio ab omnis ea officiis eveniet illum accusantium reprehenderit voluptas consectetur, corporis quaerat quis maxime placeat corrupti quidem sunt dolore eum, delectus reiciendis a excepturi ullam incidunt. Magni, esse!"
+        "image": "https://www.svgrepo.com/show/164980/cell-phone.svg",
+        "description": "Foodbook is a mobile scanner that takes in pictures of menus or names of dishes via computer vision an NLP, and outputs their nutritional values, making it simpler for users to track nutrition and have a healthier diet based on their preferences."
     },
     {
         "title": "Repudiandae recusandae tempora natus!",
