@@ -2,13 +2,13 @@
     {
         "title": "From Farm to Factory: How Processed is the Food You're Buying?",
         "year": "2025",
-        "image": "https://uxwing.com/wp-content/themes/uxwing/download/food-and-drinks/burger-icon.svg",
+        "image": "https://github.com/vdanielb/sample-visualizations/blob/main/Grocery_DB/generalized_categories.png?raw=true",
         "description": "When you pick up some brownies at your local Target, how processed is it? My goal with this visualization is to give grocery shoppers an idea of how processed the items they’re buying are, and by proxy how healthy it is."
     },
     {
         "title": "Machine Learning Project: Is American Food Unhealthy?",
         "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "https://sandiegomagazine.com/wp-content/uploads/2025/03/Rockys-SDM_KimberlyMotos27of43.jpg",
         "description": "An investigation on American recipes on food.com, as well as a Random Forest Regression model that can calculate how long it takes to cook your recipe!"
     },
     {

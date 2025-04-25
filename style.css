@@ -3,6 +3,21 @@
   --nav-color: #ed713a;
 }
 
+/* Light Theme (default) */
+:root.light {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --card-bg: #f9f9f9;
+}
+
+/* Dark Theme */
+:root.dark {
+  --bg-color: #111111;
+  --text-color: #eeeeee;
+  --card-bg: #2a2a2a;
+}
+
+
 label.color-scheme {
   position: absolute;
   top: 2rem;
@@ -19,6 +34,8 @@ body {
     padding: 2rem;
 
     accent-color: var(--color-accent);
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 h1 {
@@ -108,18 +125,45 @@ form {
 
 .projects{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
   gap: 1em;
-
   article {
-    display: grid;
-    grid-template-rows: subgrid;
-    grid-row: span 3;
-    
-    h2{
-      margin: 0;
-    }
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--card-bg);
+    color: var(--text-color);
   }
+  
+  article img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 0.25em;
+    flex-shrink: 0;
+  }
+  
+  
+  .project-text h2 {
+    margin: 0 0 0.5em 0;
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  
+  .project-text p {
+    margin: 0;
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  article h2,
+  article p {
+    color: var(--text-color);
+  }
+  
 }
 
 .resume{

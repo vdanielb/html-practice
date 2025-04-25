@@ -59,10 +59,16 @@ document.body.insertAdjacentHTML(
 );
 
 function setColorScheme(scheme) {
-  document.documentElement.style.setProperty('color-scheme', scheme);
+  document.documentElement.classList.remove('light', 'dark');
+  
+  if (scheme === 'light' || scheme === 'dark') {
+    document.documentElement.classList.add(scheme);
+  }
+
   localStorage.colorScheme = scheme;
-  select.value = localStorage.colorScheme;
+  select.value = scheme;
 }
+
 
 let select = document.querySelector('.color-scheme select');
 
@@ -99,10 +105,13 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
     const article = document.createElement('article');
     let curr = project[key];
     article.innerHTML = `
-      <${headingLevel}>${curr.title}</${headingLevel}>
       <img src="${curr.image}" alt="${curr.title}">
-      <p>${curr.description}</p>
-      `;
+      <div class="project-text">
+        <${headingLevel}>${curr.title}</${headingLevel}>
+        <p>${curr.description}</p>
+      </div>
+    `;
+  
     containerElement.appendChild(article);
   }
 }
