@@ -109,6 +109,8 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
       <div class="project-text">
         <${headingLevel}>${curr.title}</${headingLevel}>
         <p>${curr.description}</p>
+        <br>
+        <p>${curr.year}</p>
       </div>
     `;
   

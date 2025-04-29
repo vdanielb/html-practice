@@ -123,6 +123,8 @@ form {
   }
 }
 
+/* Projects page */
+
 .projects{
   display: grid;
   gap: 1em;
@@ -163,8 +165,15 @@ form {
   article p {
     color: var(--text-color);
   }
-  
 }
+
+#projects-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+
 
 .resume{
   section {
