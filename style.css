@@ -170,10 +170,54 @@ form {
 #projects-plot {
   max-width: 20em;
   margin-block: 2em;
-
   overflow: visible;
 }
 
+path {
+  transition: opacity 300ms;
+  cursor: pointer;
+}
+
+/* Add specific hover behavior for the pie chart paths */
+#projects-plot:hover path {
+  opacity: 0.5;
+}
+
+#projects-plot path:hover {
+  opacity: 1 !important;
+}
+
+path.selected {
+  fill: var(--nav-color) !important;
+}
+
+.container {
+  display: flex;
+  align-items: center; /* or center if you want vertical alignment */
+  gap: 1em; /* space between SVG and legend */
+}
+
+ul.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  border: 1px solid var(--text-color);
+  padding: 0.5em;
+  margin: 0.5em;
+  flex: 1;
+}
+
+.legend-item.highlighted {
+    color: #ed713a;
+    font-weight: bold;
+}
+
+.searchBar {
+  display: flex;
+  width: 100%;
+  height: 2.5em;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
 
 .resume{
   section {
