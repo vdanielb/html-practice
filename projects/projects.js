@@ -67,7 +67,7 @@ function renderPieChart(projectsGiven) {
                         .style('opacity', 1);
                     d3.selectAll('.legend-item').classed('highlighted', false);
 
-                    // filter based on the current search query
+                    // FIX: filter based on the current search query
                     let filteredProjects = projects.filter((project) => {
                         let values = Object.values(project).join('\n').toLowerCase();
                         return values.includes(query.toLowerCase());
