@@ -326,10 +326,10 @@ ul.legend {
 /* Stats Card */
 .stats-card {
   background: var(--card-bg);
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-  padding: 2rem 2.5rem;
-  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  margin: 1rem 0;
   max-width: 900px;
   width: 100%;
 }
@@ -339,7 +339,7 @@ dl.stats {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch;
-  gap: 2.5rem;
+  gap: 1rem;
   margin: 0;
   padding: 0;
   background: none;
@@ -351,15 +351,15 @@ dl.stats {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 120px;
+  min-width: 100px;
   flex: 1 1 0;
-  margin: 0 1.5rem;
+  margin: 0;
 }
 
 .stat-block-meta dt {
   font-weight: 600;
   color: var(--nav-color);
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 0.25rem;
@@ -367,7 +367,7 @@ dl.stats {
 }
 
 .stat-block-meta dd {
-  font-size: 2.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
   color: var(--text-color);
   margin: 0;
@@ -450,4 +450,69 @@ dl.info dd {
 
 circle.selected {
   fill: var(--nav-color);
+}
+
+/* Meta page slider */
+
+input[type=range]{
+  -webkit-appearance: none;
+  width: 500px;
+}
+
+#progress-slider {
+  width: 100%;
+  margin-bottom: 1em;
+  --progress: 100;
+  accent-color: var(--nav-color);
+  background: linear-gradient(
+    to right,
+    var(--nav-color) 0%,
+    var(--nav-color) calc(var(--progress) * 1%),
+    #ddd calc(var(--progress) * 1%),
+    #ddd 100%
+  );
+}
+
+#progress-slider::-webkit-slider-runnable-track {
+  height: 5px;
+  background: transparent;
+  border-radius: 3px;
+}
+#progress-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: var(--nav-color);
+  margin-top: -5px;
+  cursor: pointer;
+}
+
+#progress-slider::-moz-range-track {
+  height: 5px;
+  background: transparent;
+  border-radius: 3px;
+}
+#progress-slider::-moz-range-thumb {
+  border: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: var(--nav-color);
+  cursor: pointer;
+}
+#progress-slider::-ms-fill-lower {
+  background: var(--nav-color);
+}
+#progress-slider::-ms-fill-upper {
+  background: #ddd;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ccc;
 }

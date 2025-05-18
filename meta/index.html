@@ -12,6 +12,11 @@
 <body>
     <h1>Meta</h1>
     <p>Stats about the code that made this website</p>
+    <label for="selectedTime">Show commits until:
+        <input type="range" min="0" max="100" value="100" id="progress-slider">
+        <time id="selectedTime">0</time>
+    </label>
+
     <div id="stats"></div>
 
     <h2>Commits by time of day</h2>
